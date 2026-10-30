@@ -116,7 +116,7 @@ footer{background:var(--deep)}
 .mphoto img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
 .member h3{margin-top:0}
 
-/* Team grid */
+/* Team grid: every card the same size */
 .team-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;align-items:stretch}
 .team-grid .member{flex:none;min-width:0;width:auto;display:flex;flex-direction:column;padding:14px 14px 22px}
 .team-grid .mphoto{position:relative;width:100%;aspect-ratio:1/1;flex:none}
@@ -129,7 +129,7 @@ footer{background:var(--deep)}
 .logo-mark{width:98px;height:100px;background-size:221px auto;background-position:-60px -18px}
 @media (max-width:600px){.logo{font-size:24px}.logo-mark{width:70px;height:72px;background-size:159px auto;background-position:-43px -13px}}
 
-
+/* Slideshow fade: each photo fades out as the next fades in (5 s per photo) */
 .slide{transition:opacity 1.2s ease-in-out}
 .slide.on{z-index:1}
 .sbtn,.dots,.pausebtn{z-index:3}
