@@ -1,0 +1,137 @@
+/* Impr3ssions - shared styles. Brand colors from the logo: navy #0D335A, gold #FFC010. Change them in :root. */
+:root{--navy:#0D335A;--gold:#FFC010;--accent:#0D335A;--ink:#0D335A;--mist:#F4F6FA;--white:#FFFFFF;--mint:#FFC010;--soft:#DCE5F0;--page:#FDF0C4;--tint:#DFEAF7}
+*{box-sizing:border-box}
+body{margin:0;background:var(--page);color:var(--ink);font-family:'DM Sans',sans-serif;font-size:18px;line-height:1.6}
+h1,h2,h3,.logo{font-family:'Montserrat',sans-serif;margin:0}
+a{color:inherit;text-decoration:none}
+a:hover{opacity:.75}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1280px;margin:0 auto;padding:0 40px}
+.sec{padding:44px 0}
+.white{background:var(--tint)}.dark{background:var(--ink);color:var(--mist)}
+header .wrap{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;padding-top:14px;padding-bottom:14px}
+.logo{font-weight:700;font-size:28px}.logo{display:flex;align-items:center;gap:12px}/* Crops the logo mark out of your impressionslogo file. If yours is .jpg/.jpeg/.webp, change the extension below. */
+.logo-mark{flex:none;width:82px;height:84px;background:url('impressionslogo.jpeg') no-repeat;background-size:185px auto;background-position:-51px -15px}
+nav{display:flex;flex-wrap:wrap;gap:24px;align-items:center;font-weight:500;font-size:16px}
+nav a.on{border-bottom:3px solid var(--gold);padding-bottom:2px}
+.pill{display:inline-block;background:var(--ink);color:var(--mist);padding:12px 22px;border-radius:999px;font-weight:500}
+nav a.pill.on{border-bottom:0;padding-bottom:12px}
+.btn{display:inline-block;background:var(--navy);color:#fff;padding:16px 30px;border-radius:999px;font-weight:500}
+.btn.line{background:transparent;color:var(--ink);padding:14px 28px;border:2px solid var(--ink)}
+.btn.mint{background:var(--gold);color:var(--navy)}.btn.gold{background:var(--gold);color:var(--navy)}
+.kicker{font-weight:500;color:var(--navy);font-size:15px;margin:0;display:inline-block;border-bottom:3px solid var(--gold);padding-bottom:4px}.dark .kicker{color:var(--gold);border-color:var(--gold)}
+.hero{padding:32px 0 40px}
+.hero h1{font-weight:700;font-size:clamp(38px,5.8vw,72px);line-height:1.07;margin:14px 0 16px;max-width:1100px}
+.hero p.lead{max-width:960px;margin:0 0 24px;font-size:22px}
+h2{font-size:38px;line-height:1.15;margin-bottom:14px;max-width:none}
+.sub{max-width:none;margin:0 0 22px;font-size:19px}
+.row{display:flex;flex-wrap:wrap;gap:16px}
+.card{flex:1 1 240px;background:var(--white);border-radius:20px;padding:22px}
+.card.w{background:var(--white)}
+.card h3{font-size:20px;margin:8px 0 10px}.card p{margin:0;font-size:17px}
+.num{font-family:'Montserrat',sans-serif;font-weight:700;color:var(--accent);font-size:15px}
+.stat{flex:1 1 200px;border-top:4px solid var(--gold);padding-top:14px}
+.stat b{font-family:'Montserrat',sans-serif;font-size:52px;line-height:1;display:block}
+.stat p{margin:8px 0 0;font-size:16px}
+.mv{flex:1 1 380px}.mv p{font-size:21px;line-height:1.4;margin:8px 0 0}
+.rule{flex:1 1 260px;border-top:4px solid var(--gold);padding-top:14px}
+.photo{width:96px;height:96px;border-radius:999px;background:var(--soft);display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-weight:700;font-size:28px;color:var(--accent);overflow:hidden}
+.photo img{width:100%;height:100%;object-fit:cover}
+.role{color:var(--accent);font-weight:500;font-size:15px}
+.event{flex:1 1 100%;display:flex;flex-wrap:wrap;gap:20px;align-items:center;background:var(--white);border-radius:20px;padding:18px 24px}
+.event .date{font-family:'Montserrat',sans-serif;font-weight:700;color:var(--accent);flex:0 0 150px}
+.event .body{flex:1 1 280px}.event h3{font-size:20px;margin:0 0 4px}.event p{margin:0;font-size:15px}
+.event .pill{padding:10px 22px}
+
+.card{border-top:4px solid var(--gold)}.card.w{border-top-color:var(--navy)}
+
+/* Slideshow: add or remove <figure class="slide"> blocks in index.html */
+.slider{position:relative;aspect-ratio:16/9;max-height:480px;width:100%;background:var(--navy);border-radius:20px;overflow:hidden;border-bottom:6px solid var(--gold)}
+.slide{position:absolute;inset:0;margin:0;opacity:0;transition:opacity .8s ease;pointer-events:none}
+.slide.on{opacity:1;pointer-events:auto}
+.slide img{width:100%;height:100%;object-fit:cover;display:block}
+.sbtn{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:999px;border:0;background:var(--gold);color:var(--navy);font-size:28px;line-height:1;cursor:pointer}
+.sbtn:hover{opacity:.85}.sbtn:focus-visible,.dots button:focus-visible{outline:3px solid #fff;outline-offset:3px}
+.prev{left:16px}.next{right:16px}
+.dots{position:absolute;right:20px;bottom:18px;display:flex;gap:8px}
+.dots button{width:12px;height:12px;border-radius:999px;border:2px solid #fff;background:transparent;padding:0;cursor:pointer}
+.dots button[aria-selected=true]{background:var(--gold);border-color:var(--gold)}
+@media (max-width:600px){.slider{aspect-ratio:4/3}.sbtn{width:40px;height:40px}}
+@media (prefers-reduced-motion:reduce){.slide{transition:none}}
+
+/* Footer */
+footer{background:#08243F;color:#E8EEF6;border-top:6px solid var(--gold);margin-top:0}
+footer a:focus-visible,footer button:focus-visible,footer input:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.fgrid{display:flex;flex-wrap:wrap;gap:28px;padding-top:36px;padding-bottom:30px}
+.fcol{flex:1 1 220px}.fbrand{flex:1.2 1 260px}.fnews{flex:1.4 1 320px}
+footer h2{font-size:16px;color:var(--gold);margin:0 0 14px}
+footer ul{list-style:none;margin:0;padding:0}footer li{margin:0 0 8px}
+.flogo{color:#fff}.ftag{color:var(--gold);font-weight:500;margin:14px 0 8px}
+.fsmall{font-size:15px;margin:0 0 14px;max-width:380px}
+.news{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:18px}
+.news input{flex:1 1 200px;padding:14px 18px;border-radius:999px;border:2px solid transparent;font:inherit;font-size:16px;color:var(--navy)}
+.news button{padding:14px 26px;border-radius:999px;border:0;background:var(--gold);color:var(--navy);font:inherit;font-weight:700;cursor:pointer}
+.news button:hover{opacity:.85}
+.socials{display:flex;flex-wrap:wrap;gap:10px 22px}.socials li{margin:0}
+.socials a,footer li a{border-bottom:1px solid rgba(255,255,255,.35)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.fbar{border-top:1px solid rgba(255,255,255,.15);font-size:14px}
+.fbar .wrap{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;padding-top:20px;padding-bottom:20px}
+
+@media (max-width:600px){.wrap{padding:0 20px}.sec{padding:32px 0}.hero{padding:20px 0 28px}}
+
+.hero{background:linear-gradient(180deg,var(--page),#FBE39A)}
+@media (max-width:600px){.wrap{padding:0 20px}}
+
+@media (max-width:600px){.logo{font-size:22px}.logo-mark{width:62px;height:64px;background-size:141px auto;background-position:-39px -12px}}
+
+/* ===== Mixed theme: navy header, hero, call-to-action and footer; light reading sections ===== */
+:root{--page:#FDF0C4;--tint:#DFEAF7;--deep:#061B31}
+body{background:var(--page);color:var(--navy)}
+a:focus-visible{outline-color:var(--navy)}
+header a:focus-visible,.hero a:focus-visible,.dark a:focus-visible{outline-color:var(--gold)}
+header{background:var(--navy);color:#fff}
+.hero{background:linear-gradient(180deg,var(--navy),#0A2A4B);color:#fff}
+.dark{background:var(--navy);color:#fff}
+.white{background:var(--tint)}
+.kicker{color:var(--navy);border-color:var(--gold)}
+.hero .kicker,.dark .kicker{color:var(--gold)}
+.pill{background:var(--gold);color:var(--navy)}
+.btn{background:var(--navy);color:#fff}
+.btn.line{background:transparent;color:var(--navy);border:2px solid var(--navy)}
+.hero .btn,.dark .btn{background:var(--gold);color:var(--navy)}
+.hero .btn.line{background:transparent;color:#fff;border:2px solid #fff}
+.card,.card.w{background:#fff;color:var(--navy);border-top-color:var(--gold)}
+.num,.role,.event .date{color:var(--navy)}
+.event{background:#fff}
+.photo{background:var(--soft);color:var(--navy)}
+.slider{background:var(--navy)}
+footer{background:var(--deep)}
+/* the logo file has a white background, so it sits on a white badge */
+.logo-mark{background-color:#fff;border-radius:14px;box-shadow:0 0 0 6px #fff;margin:6px 10px 6px 6px}
+
+/* Team cards with photos */
+.member{flex:1 1 calc(25% - 12px);min-width:220px;padding:14px 14px 22px}
+.mphoto{aspect-ratio:1/1;border-radius:14px;overflow:hidden;background:var(--soft);margin-bottom:14px}
+.mphoto img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.member h3{margin-top:0}
+
+/* Team grid */
+.team-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;align-items:stretch}
+.team-grid .member{flex:none;min-width:0;width:auto;display:flex;flex-direction:column;padding:14px 14px 22px}
+.team-grid .mphoto{position:relative;width:100%;aspect-ratio:1/1;flex:none}
+.team-grid .mphoto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top}
+@media (max-width:1000px){.team-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.team-grid{grid-template-columns:1fr}}
+
+/* Larger logo */
+.logo{font-size:32px}
+.logo-mark{width:98px;height:100px;background-size:221px auto;background-position:-60px -18px}
+@media (max-width:600px){.logo{font-size:24px}.logo-mark{width:70px;height:72px;background-size:159px auto;background-position:-43px -13px}}
+
+
+.slide{transition:opacity 1.2s ease-in-out}
+.slide.on{z-index:1}
+.sbtn,.dots,.pausebtn{z-index:3}
+.pausebtn{position:absolute;left:16px;bottom:16px;border:0;border-radius:999px;background:var(--gold);color:var(--navy);font:inherit;font-weight:700;font-size:14px;padding:8px 16px;cursor:pointer}
+.pausebtn:hover{opacity:.85}
